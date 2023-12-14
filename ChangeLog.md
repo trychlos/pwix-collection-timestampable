@@ -1,3 +1,22 @@
+# pwix:collection-timestampable
+
+### 1.1.0-rc
+
+    Release date: 
+
+    - Upgrade Meteor requirement to 2.0 (from 1.0)
+    - Upgrade matb33:collection-hooks requirement to 1.3.0 (from 0.7.6)
+    - Upgrade aldeed:collection2 requirement to 3.5.0 (from 2.0.0)
+    - Remove aldeed:simple-schema@1.0.3 dependency, now required as an NPM module
+    - Add missing zimme:collection-behaviours 1.1.3 dependency
+    - Add missing aldeed:schema-deny 3.0.0 dependency
+
+---
+P. Wieser
+- Last updated on 2023, Oct. 11th
+
+### Forked from zimme:collection-timestampable
+
 ## [1.0.9]
   * Add missing dependency of the check package - [#15]
   * Document that global configuration belongs in `shared` code, preferably
