@@ -20,7 +20,7 @@ import { CollectionBehaviours } from 'meteor/zimme:collection-behaviours';
     };
 
     const behaviour = function( options={} ){
-        let addAfDefs, afDefinition,  def, definition, isLocalCollection, regEx;
+        let addAfDefs, afDefinition, def, definition, isLocalCollection, regEx;
         check( options, Object );
 
         let ref = {};
@@ -54,13 +54,13 @@ import { CollectionBehaviours } from 'meteor/zimme:collection-behaviours';
                 }
             }
 
-            const RegEx_Id = /^[23456789ABCDEFGHJKLMNPQRSTWXYZabcdefghijkmnopqrstuvwxyz]{17}$/;
-            regEx = new RegExp("(" + RegEx_Id + ")|^" + systemId + "$");
+            //const RegEx_Id = /^[23456789ABCDEFGHJKLMNPQRSTWXYZabcdefghijkmnopqrstuvwxyz]{17}$/;
+            //regEx = new RegExp("(" + RegEx_Id + ")|^" + systemId + "$");
 
             if( createdBy ){
                 def = definition[createdBy] = {
                     optional: true,
-                    regEx: regEx,
+                    //regEx: regEx,
                     type: String
                 };
                 if( af && typeof af === 'object' ){
@@ -83,7 +83,7 @@ import { CollectionBehaviours } from 'meteor/zimme:collection-behaviours';
                 def = definition[updatedBy] = {
                     denyInsert: true,
                     optional: true,
-                    regEx: regEx,
+                    //regEx: regEx,
                     type: String
                 };
                 if( af && typeof af === 'object' ){
@@ -97,30 +97,56 @@ import { CollectionBehaviours } from 'meteor/zimme:collection-behaviours';
         isLocalCollection = this.collection._connection === null;
 
         if( Meteor.isServer || isLocalCollection ){
-            this.collection.before.insert( function( userId, doc ){
+            const collection = this.collection;
+            collection.before.insert( function( userId, doc ){
                 if( userId == null ){
                     userId = systemId;
                 }
                 if( createdAt ){
-                    doc[createdAt] = new Date;
+                    doc[createdAt] = new Date();
                 }
                 if( createdBy && !doc[createdBy] ){
                     doc[createdBy] = userId;
                 }
             });
-            this.collection.before.update( function( userId, doc, fieldNames, modifier, options ){
-                var $set;
+            collection.before.update( function( userId, doc, fieldNames, modifier, options ){
+                let $set;
                 if( userId === null ){
                     userId = systemId;
                 }
-                $set = modifier.$set != null ? modifier.$set : modifier.$set = {};
+                $set = _.isNil( modifier.$set ) ? modifier.$set = {} : modifier.$set;
                 if( updatedAt ){
-                    $set[updatedAt] = new Date;
+                    $set[updatedAt] = new Date();
                 }
                 if( updatedBy && !$set[updatedBy] ){
                     $set[updatedBy] = userId;
                 }
                 //console.debug( 'updatedBy', updatedBy, 'userId', userId, 'timestampable set', $set );
+            });
+            collection.before.upsert( function( userId, selector, modifier, options ){
+                let $set;
+                if( userId == null ){
+                    userId = systemId;
+                }
+                const doc = collection.direct.find( selector ).fetch();
+                $set = _.isNil( modifier.$set ) ? modifier.$set = {} : modifier.$set;
+                // this is an update
+                if( doc.length ){
+                    if( updatedAt ){
+                        $set[updatedAt] = new Date();
+                    }
+                    if( updatedBy && !$set[updatedBy] ){
+                        $set[updatedBy] = userId;
+                    }
+                // this is an insert
+                } else {
+                    if( createdAt && !$set[createdAt] ){
+                        $set[createdAt] = new Date();
+                    }
+                    if( createdBy && !$set[createdBy] ){
+                        $set[createdBy] = userId;
+                    }
+                }
             });
         }
     };

@@ -10,6 +10,7 @@
     - Remove aldeed:simple-schema@1.0.3 dependency, now required as an NPM module
     - Add missing zimme:collection-behaviours 1.1.3 dependency
     - Add missing aldeed:schema-deny 3.0.0 dependency
+    - Also manage (missing) upsert's
 
 ---
 P. Wieser
