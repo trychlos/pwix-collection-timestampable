@@ -1,8 +1,8 @@
 # pwix:collection-timestampable
 
-### 1.1.0
+### 2.0.0-rc
 
-    Release date: 2024- 6- 6
+    Release date: 
 
     - Upgrade Meteor requirement to 2.0 and 3.0-rc.0 (from 1.0)
     - Upgrade matb33:collection-hooks requirement to 1.3.0 and 2.0.0-beta.0 (from 0.7.6)
