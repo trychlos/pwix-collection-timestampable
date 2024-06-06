@@ -5,7 +5,7 @@
 import _ from 'lodash';
 
 import { CollectionBehaviours } from 'meteor/pwix:collection-behaviours';
-import SimpleSchema from 'meteor/aldeed/simple-schema';
+import SimpleSchema from 'meteor/aldeed:simple-schema';
 
 (function() {
     const af = Package['aldeed:autoform'];

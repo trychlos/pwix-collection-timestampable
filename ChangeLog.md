@@ -4,7 +4,7 @@
 
     Release date: 
 
-    - 
+    - Fix aldeed:simple-schema package import
 
 ### 2.0.0
 
