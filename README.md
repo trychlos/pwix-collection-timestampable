@@ -1,5 +1,9 @@
 # pwix:collection-timestampable
 
+This package is forked from `zimme:collection-timestampable` to be compatible with MEteor 2.x and incoming Meteor 3.x.
+
+It also features `upsert`s management.
+
 ### Forked from zimme:collection-timestampable
 
 [![Gitter][Gitter Badge]][Gitter]
