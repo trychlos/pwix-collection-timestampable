@@ -3,9 +3,9 @@
  */
 
 import _ from 'lodash';
-import SimpleSchema from 'simpl-schema';
 
-import { CollectionBehaviours } from 'meteor/zimme:collection-behaviours';
+import { CollectionBehaviours } from 'meteor/pwix:collection-behaviours';
+import SimpleSchema from 'meteor/aldeed/simple-schema';
 
 (function() {
     const af = Package['aldeed:autoform'];

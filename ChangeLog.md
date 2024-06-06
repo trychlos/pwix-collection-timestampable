@@ -4,13 +4,13 @@
 
     Release date: 
 
-    - Upgrade Meteor requirement to 2.0 (from 1.0)
-    - Upgrade matb33:collection-hooks requirement to 1.3.0 (from 0.7.6)
-    - Upgrade aldeed:collection2 requirement to 3.5.0 (from 2.0.0)
-    - Remove aldeed:simple-schema@1.0.3 dependency, now required as an NPM module
-    - Add missing zimme:collection-behaviours 1.1.3 dependency
-    - Add missing aldeed:schema-deny 3.0.0 dependency
-    - Also manage (missing) upsert's
+    - Upgrade Meteor requirement to 2.0 and 3.0-rc.0 (from 1.0)
+    - Upgrade matb33:collection-hooks requirement to 1.3.0 and 2.0.0-beta.0 (from 0.7.6)
+    - Upgrade aldeed:collection2 requirement to 3.5.0 and 4.0.1 (from 2.0.0)
+    - Upgrade aldeed:simple-schema to 1.13.1
+    - Add missing pwix:collection-behaviours 2.0.0 dependency
+    - Add missing aldeed:schema-deny 3.0.0 and 4.0.2 dependency
+    - New feature: manage upsert's
 
 ---
 P. Wieser
