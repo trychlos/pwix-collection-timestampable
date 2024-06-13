@@ -1,8 +1,14 @@
 # pwix:collection-timestampable
 
-### 2.0.2-rc
+### 2.0.3-rc
 
     Release date:
+
+    -
+
+### 2.0.2
+
+    Release date: 2024- 6-13
 
     - Fix Github address
     - Update README
@@ -24,10 +30,6 @@
     - Add missing pwix:collection-behaviours 2.0.0 dependency
     - Add missing aldeed:schema-deny 3.0.0 and 4.0.2 dependency
     - New feature: manage upsert's
-
----
-P. Wieser
-- Last updated on 2024, Jun. 6th
 
 ### Forked from zimme:collection-timestampable
 
@@ -92,3 +94,7 @@ P. Wieser
 
 [#9]: https://github.com/zimme/meteor-collection-timestampable/issues/9
 [#15]: https://github.com/zimme/meteor-collection-timestampable/issues/15
+
+---
+P. Wieser
+- Last updated on 2024, Jun. 13th
