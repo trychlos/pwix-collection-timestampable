@@ -1,8 +1,8 @@
 # pwix:collection-timestampable
 
-### 2.0.2-rc
+### 2.0.2
 
-    Release date:
+    Release date: 2024- 6-13
 
     - Fix Github address
     - Update README
@@ -27,7 +27,7 @@
 
 ---
 P. Wieser
-- Last updated on 2024, Jun. 6th
+- Last updated on 2024, Jun. 13th
 
 ### Forked from zimme:collection-timestampable
 
