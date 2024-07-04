@@ -5,6 +5,7 @@
     Release date:
 
     - Have both api.use() and api.imply()
+    - Add missing aldeed:simple-schema dependency
 
 ### 2.0.2
 
