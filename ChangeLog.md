@@ -4,7 +4,7 @@
 
     Release date:
 
-    -
+    - Have both api.use() and api.imply()
 
 ### 2.0.2
 
