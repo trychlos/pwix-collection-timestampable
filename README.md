@@ -103,6 +103,12 @@ See [below](#configuration).
 
 A reactive data source.
 
+##### `Timestampable.fieldDef()`
+
+Returns a `Field.Def`-valid definition for the fields added by the package.
+
+As the package already updates the collection schema, this definition is only useful when the caller wants a tabular display, and wants this tabular display also embeds the `Timestampable` fields.
+
 ## Configuration
 
 The package's behavior can be configured through a call to the `CollectionBehaviours.configure()` method, with just a single javascript object argument, which itself should only contains the options you want override.

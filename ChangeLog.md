@@ -8,6 +8,7 @@
     - Add missing aldeed:simple-schema dependency
     - Have configure() (todo #1), thus globally export Timestampable, bumping minor candidate version number
     - Have check_npms() server side (todo #2)
+    - Provides a Field.Def-valid definition of the added fields
 
 ### 2.0.2
 
