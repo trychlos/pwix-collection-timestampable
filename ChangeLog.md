@@ -1,11 +1,12 @@
 # pwix:collection-timestampable
 
-### 2.0.3-rc
+### 2.1.0-rc
 
     Release date:
 
     - Have both api.use() and api.imply()
     - Add missing aldeed:simple-schema dependency
+    - Have configure() (todo #1), thus globally export Timestampable, bumping minor candidate version number
 
 ### 2.0.2
 

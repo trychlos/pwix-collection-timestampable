@@ -10,7 +10,6 @@
 
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
-|    1 | 2023-12-14 | have configure() |
 |    2 | 2023-12-14 | have check_npms() |
 |    3 |  |  |
 
@@ -19,6 +18,8 @@
 
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
+|    1 | 2023-12-14 | have configure() |
+|      | 2024- 7- 4 | done |
 
 ---
 P. Wieser

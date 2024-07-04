@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:collection-timestampable',
-    version: '2.0.3-rc',
+    version: '2.1.0-rc',
     summary: 'Add timestampable behavior to Mongo collections',
     git: 'https://github.com/trychlos/pwix-collection-timestampable',
     documentation: 'README.md'
@@ -8,6 +8,9 @@ Package.describe({
 
 Package.onUse( function( api ){
     configure( api );
+    api.export([
+        'Timestampable'
+    ]);
     api.mainModule( 'src/common/js/index.js', [ 'client', 'server' ]);
 });
 
