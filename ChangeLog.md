@@ -7,6 +7,7 @@
     - Have both api.use() and api.imply()
     - Add missing aldeed:simple-schema dependency
     - Have configure() (todo #1), thus globally export Timestampable, bumping minor candidate version number
+    - Have check_npms() server side (todo #2)
 
 ### 2.0.2
 

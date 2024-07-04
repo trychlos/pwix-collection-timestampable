@@ -11,7 +11,8 @@ Package.onUse( function( api ){
     api.export([
         'Timestampable'
     ]);
-    api.mainModule( 'src/common/js/index.js', [ 'client', 'server' ]);
+    api.mainModule( 'src/client/js/index.js', 'client' );
+    api.mainModule( 'src/server/js/index.js', 'server' );
 });
 
 Package.onTest( function( api ){
@@ -33,4 +34,5 @@ function configure( api ){
     _use( 'ecmascript' );
     _use( 'matb33:collection-hooks@1.3.0 || 2.0.0-beta.0' );
     _use( 'pwix:collection-behaviours@2.0.0' );
+    _use( 'tmeasday:check-npm-versions@1.0.2 || 2.0.0-rc300.0', 'server' );
 }

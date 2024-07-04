@@ -10,8 +10,8 @@
 
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
-|    2 | 2023-12-14 | have check_npms() |
-|    3 |  |  |
+|    3 | 2024- 7- 4 | provides a Field.Def fieldset if possible |
+|    4 |  |  |
 
 ---
 ## Done
@@ -19,6 +19,8 @@
 |   Id | Date       | Description and comment(s) |
 | ---: | :---       | :---                       |
 |    1 | 2023-12-14 | have configure() |
+|      | 2024- 7- 4 | done |
+|    2 | 2023-12-14 | have check_npms() |
 |      | 2024- 7- 4 | done |
 
 ---
