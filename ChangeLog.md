@@ -1,8 +1,8 @@
 # pwix:collection-timestampable
 
-### 2.1.0-rc
+### 2.1.0
 
-    Release date:
+    Release date: 2024- 7- 5
 
     - Have both api.use() and api.imply()
     - Add missing aldeed:simple-schema dependency
@@ -101,4 +101,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, Jun. 13th
+- Last updated on 2024, Jul. 5th
