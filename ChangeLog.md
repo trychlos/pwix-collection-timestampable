@@ -1,8 +1,8 @@
 # pwix:collection-timestampable
 
-### 2.2.0-rc
+### 2.2.0
 
-    Release date: 
+    Release date: 2024- 9-20
 
     - Accept aldeed:simple-schema v2.0.0, thus bumping minor candidate version number
 
@@ -107,4 +107,4 @@
 
 ---
 P. Wieser
-- Last updated on 2024, Jul. 5th
+- Last updated on 2024, Sep. 20th
