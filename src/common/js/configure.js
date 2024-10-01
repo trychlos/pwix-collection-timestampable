@@ -7,7 +7,6 @@ import _ from 'lodash';
 import { ReactiveVar} from 'meteor/reactive-var';
 
 let _conf = {};
-
 Timestampable._conf = new ReactiveVar( _conf );
 
 Timestampable._defaults = {
@@ -22,7 +21,7 @@ Timestampable._defaults = {
  */
 Timestampable.configure = function( o ){
     if( o && _.isObject( o )){
-        _.merge( _conf, Timestampable._defaults, o );
+        _conf = _.merge( Timestampable._defaults, _conf, o );
         Timestampable._conf.set( _conf );
         _verbose( Timestampable.C.Verbose.CONFIGURE, 'pwix:collection-timestampable configure() with', o );
     }
@@ -30,5 +29,5 @@ Timestampable.configure = function( o ){
     return Timestampable._conf.get();
 }
 
-_.merge( _conf, Timestampable._defaults );
+_conf = _.merge( {}, Timestampable._defaults );
 Timestampable._conf.set( _conf );

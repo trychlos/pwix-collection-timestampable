@@ -1,5 +1,11 @@
 # pwix:collection-timestampable
 
+### 2.2.1-rc
+
+    Release date: 
+
+    - Fix configuration overrides
+
 ### 2.2.0
 
     Release date: 2024- 9-20
