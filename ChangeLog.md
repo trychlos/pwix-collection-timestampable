@@ -1,5 +1,12 @@
 # pwix:collection-timestampable
 
+### 2.3.0-rc
+
+    Release date: 
+
+    - Change packages dependencies, replacing aldeed:simple-schema with aldeed:collection2
+    - Remove matb33:collection-hooks v1.x dependency, thus bumping minor candidate version number
+
 ### 2.2.1
 
     Release date: 2024-10- 4
