@@ -29,7 +29,7 @@ function configure( api ){
     };
     api.versionsFrom([ '2.9.0', '3.0-rc.0' ]);
     _use( 'aldeed:collection2@4.0.1' );
-    _use( 'aldeed:schema-deny@3.0.0 || 4.0.0' );
+    _use( 'aldeed:schema-deny@3.0.0 || 4.0.0 || 5.0.0' );
     _use( 'check' );
     _use( 'ecmascript' );
     _use( 'matb33:collection-hooks@2.0.0' );

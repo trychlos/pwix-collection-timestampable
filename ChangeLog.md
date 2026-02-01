@@ -6,6 +6,7 @@
 
     - Change packages dependencies, replacing aldeed:simple-schema with aldeed:collection2
     - Remove matb33:collection-hooks v1.x dependency, thus bumping minor candidate version number
+    - Bump aldeed:schema-deny dependency to 5.0.0
 
 ### 2.2.1
 
