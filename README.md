@@ -221,3 +221,7 @@ In case of support or error, please report your issue request to our [Issues tra
 [License]: https://github.com/zimme/meteor-collection-timestampable/blob/master/LICENSE.md
 [License Badge]: https://img.shields.io/badge/license-MIT-blue.svg
 -->
+
+---
+P. Wieser
+- Last updated on 2024, Nov. 25th
