@@ -19,6 +19,7 @@ This Meteor package is installable with the usual command:
 
 ```sh
     meteor add pwix:collection-timestampable
+    meteor npm install lodash --save
 ```
 
 ## Usage

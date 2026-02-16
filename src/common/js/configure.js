@@ -21,9 +21,20 @@ Timestampable._defaults = {
  */
 Timestampable.configure = function( o ){
     if( o && _.isObject( o )){
-        _conf = _.merge( Timestampable._defaults, _conf, o );
-        Timestampable._conf.set( _conf );
-        _verbose( Timestampable.C.Verbose.CONFIGURE, 'pwix:collection-timestampable configure() with', o );
+        // check that keys exist
+        let built_conf = {};
+        Object.keys( o ).forEach(( it ) => {
+            if( Object.keys( Timestampable._defaults ).includes( it )){
+                built_conf[it] = o[it];
+            } else {
+                console.warn( 'pwix:collection-timestampable configure() ignore unmanaged key \''+it+'\'' );
+            }
+        });
+        if( Object.keys( built_conf ).length ){
+            _conf = _.merge( Timestampable._defaults, _conf, built_conf );
+            Timestampable._conf.set( _conf );
+            _verbose( Timestampable.C.Verbose.CONFIGURE, 'pwix:collection-timestampable configure() with', built_conf );
+        }
     }
     // also acts as a getter
     return Timestampable._conf.get();

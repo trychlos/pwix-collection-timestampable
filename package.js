@@ -34,5 +34,6 @@ function configure( api ){
     _use( 'ecmascript' );
     _use( 'matb33:collection-hooks@2.0.0' );
     _use( 'pwix:collection-behaviours@2.0.0' );
+    _use( 'reactive-var' );
     _use( 'tmeasday:check-npm-versions@1.0.2 || 2.0.0-rc300.0', 'server' );
 }
