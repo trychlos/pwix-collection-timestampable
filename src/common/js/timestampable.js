@@ -5,9 +5,13 @@
 import _ from 'lodash';
 
 import { CollectionBehaviours } from 'meteor/pwix:collection-behaviours';
+import { Logger } from 'meteor/pwix:logger';
 import SimpleSchema from 'meteor/aldeed:simple-schema';
 
-(function() {
+const logger = Logger.get();
+
+( function(){
+    logger.verbose({ verbosity: Timestampable.configure().verbosity, against: Timestampable.C.Verbose.FUNCTIONS }, 'behaviour definition' );
     const af = Package['aldeed:autoform'];
     const c2 = Package['aldeed:collection2'];
 
@@ -121,7 +125,6 @@ import SimpleSchema from 'meteor/aldeed:simple-schema';
                 if( updatedBy && !$set[updatedBy] ){
                     $set[updatedBy] = userId;
                 }
-                //console.debug( 'updatedBy', updatedBy, 'userId', userId, 'timestampable set', $set );
             });
             collection.before.upsert( function( userId, selector, modifier, options ){
                 let $set;

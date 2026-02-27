@@ -141,11 +141,13 @@ Known configuration options are:
 
     - `Timestampable.C.Verbose.NONE`
 
-        Do not display any trace log to the console
+        Do not display any trace log to the console.
 
     - `Timestampable.C.Verbose.CONFIGURE`
 
-        Trace `Timestampable.configure()` calls and their result
+        Trace `Timestampable.configure()` calls and their result.
+
+        This is the default.
 
     - `Timestampable.C.Verbose.FUNCTIONS`
 

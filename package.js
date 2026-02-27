@@ -1,6 +1,6 @@
 Package.describe({
     name: 'pwix:collection-timestampable',
-    version: '2.3.1-rc.0',
+    version: '2.4.0-rc.0',
     summary: 'Add timestampable behavior to Mongo collections',
     git: 'https://github.com/trychlos/pwix-collection-timestampable',
     documentation: 'README.md'
@@ -34,6 +34,7 @@ function configure( api ){
     _use( 'ecmascript' );
     _use( 'matb33:collection-hooks@2.0.0' );
     _use( 'pwix:collection-behaviours@2.0.0' );
+    _use( 'pwix:logger@1.0.0-rc' );
     _use( 'reactive-var' );
     _use( 'tmeasday:check-npm-versions@1.0.2 || 2.0.0-rc300.0', 'server' );
 }
