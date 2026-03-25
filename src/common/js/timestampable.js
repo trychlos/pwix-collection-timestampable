@@ -3,10 +3,10 @@
  */
 
 import _ from 'lodash';
+import SimpleSchema from 'simpl-schema';
 
 import { CollectionBehaviours } from 'meteor/pwix:collection-behaviours';
 import { Logger } from 'meteor/pwix:logger';
-import SimpleSchema from 'meteor/aldeed:simple-schema';
 
 const logger = Logger.get();
 
@@ -100,6 +100,9 @@ const logger = Logger.get();
 
         isLocalCollection = this.collection._connection === null;
 
+        if( this.collection.before ){
+        logger.debug( 'this.collection', this.collection );
+
         if( Meteor.isServer || isLocalCollection ){
             const collection = this.collection;
             collection.before.insert( function( userId, doc ){
@@ -152,6 +155,7 @@ const logger = Logger.get();
                 }
             });
         }
+    }
     };
 
     CollectionBehaviours.define( 'timestampable', behaviour );
