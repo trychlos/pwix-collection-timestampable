@@ -3,7 +3,7 @@
  */
 
 import _ from 'lodash';
-import SimpleSchema from 'simpl-schema';
+import SimpleSchema from 'meteor/aldeed:simple-schema';
 
 import { CollectionBehaviours } from 'meteor/pwix:collection-behaviours';
 import { Logger } from 'meteor/pwix:logger';
@@ -74,7 +74,7 @@ const logger = Logger.get();
 
             if( updatedAt ){
                 def = definition[updatedAt] = {
-                    denyInsert: true,
+                    //denyInsert: true,
                     optional: true,
                     type: Date
                 };
@@ -85,7 +85,7 @@ const logger = Logger.get();
 
             if( updatedBy ){
                 def = definition[updatedBy] = {
-                    denyInsert: true,
+                    //denyInsert: true,
                     optional: true,
                     //regEx: regEx,
                     type: String
@@ -101,7 +101,7 @@ const logger = Logger.get();
         isLocalCollection = this.collection._connection === null;
 
         if( this.collection.before ){
-        logger.debug( 'this.collection', this.collection );
+        //logger.debug( 'this.collection', this.collection );
 
         if( Meteor.isServer || isLocalCollection ){
             const collection = this.collection;

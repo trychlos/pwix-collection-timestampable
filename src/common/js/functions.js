@@ -15,22 +15,30 @@ Timestampable.fieldDef = function(){
     return [
         {
             name: 'createdAt',
-            schema: false,
+            type: Date,
+            optional: true,
+            //schema: false,
             dt_visible: false
         },
         {
             name: 'createdBy',
-            schema: false,
+            type: String,
+            optional: true,
+            //schema: false,
             dt_visible: false
         },
         {
             name: 'updatedAt',
-            schema: false,
+            type: Date,
+            optional: true,
+            //schema: false,
             dt_visible: false
         },
         {
             name: 'updatedBy',
-            schema: false,
+            type: String,
+            optional: true,
+            //schema: false,
             dt_visible: false
         }
     ];

@@ -8,7 +8,7 @@
 
     - configure() now warns for unmanaged keys
     - Use pwix:logger universal logger, thus bumping minor candidate version number
-    - Replace aldeed:simple-schema dependency with npm simpl-schema
+    - Replace npm aldeed:simple-schema dependency with package meteor/aldeed:simple-schema
 
 ### 2.3.0
 

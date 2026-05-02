@@ -10,7 +10,7 @@ if( false ){
 
 checkNpmVersions({
     'lodash': '^4.17.0',
-    'simpl-schema': '^3.4.7'
+    'meteor/aldeed:simple-schema': '^3.4.7'
 },
     'pwix:collection-timestampable'
 );
