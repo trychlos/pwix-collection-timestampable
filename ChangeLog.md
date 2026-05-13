@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Define the conditions which must be met by the collection when appying the behaviour
 
 ### 2.4.0
 

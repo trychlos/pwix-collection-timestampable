@@ -158,6 +158,10 @@ const logger = Logger.get();
         }
     };
 
-    CollectionBehaviours.define( 'timestampable', behaviour );
+    CollectionBehaviours.define( 'timestampable', behaviour, {
+        waitUntil( collection ){
+            return !!collection.before && !!collection.direct;
+        }
+    });
 
 }).call( this );
