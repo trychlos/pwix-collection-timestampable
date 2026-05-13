@@ -103,59 +103,59 @@ const logger = Logger.get();
         if( this.collection.before ){
         //logger.debug( 'this.collection', this.collection );
 
-        if( Meteor.isServer || isLocalCollection ){
-            const collection = this.collection;
-            collection.before.insert( function( userId, doc ){
-                if( userId == null ){
-                    userId = systemId;
-                }
-                if( createdAt ){
-                    doc[createdAt] = new Date();
-                }
-                if( createdBy && !doc[createdBy] ){
-                    doc[createdBy] = userId;
-                }
-            });
-            collection.before.update( function( userId, doc, fieldNames, modifier, options ){
-                let $set;
-                if( userId === null ){
-                    userId = systemId;
-                }
-                $set = _.isNil( modifier.$set ) ? modifier.$set = {} : modifier.$set;
-                if( updatedAt ){
-                    $set[updatedAt] = new Date();
-                }
-                if( updatedBy && !$set[updatedBy] ){
-                    $set[updatedBy] = userId;
-                }
-            });
-            collection.before.upsert( function( userId, selector, modifier, options ){
-                let $set;
-                if( userId == null ){
-                    userId = systemId;
-                }
-                const doc = collection.direct.find( selector ).fetch();
-                $set = _.isNil( modifier.$set ) ? modifier.$set = {} : modifier.$set;
-                // this is an update
-                if( doc.length ){
+            if( Meteor.isServer || isLocalCollection ){
+                const collection = this.collection;
+                collection.before.insert( function( userId, doc ){
+                    if( userId == null ){
+                        userId = systemId;
+                    }
+                    if( createdAt ){
+                        doc[createdAt] = new Date();
+                    }
+                    if( createdBy && !doc[createdBy] ){
+                        doc[createdBy] = userId;
+                    }
+                });
+                collection.before.update( function( userId, doc, fieldNames, modifier, options ){
+                    let $set;
+                    if( userId === null ){
+                        userId = systemId;
+                    }
+                    $set = _.isNil( modifier.$set ) ? modifier.$set = {} : modifier.$set;
                     if( updatedAt ){
                         $set[updatedAt] = new Date();
                     }
                     if( updatedBy && !$set[updatedBy] ){
                         $set[updatedBy] = userId;
                     }
-                // this is an insert
-                } else {
-                    if( createdAt && !$set[createdAt] ){
-                        $set[createdAt] = new Date();
+                });
+                collection.before.upsert( function( userId, selector, modifier, options ){
+                    let $set;
+                    if( userId == null ){
+                        userId = systemId;
                     }
-                    if( createdBy && !$set[createdBy] ){
-                        $set[createdBy] = userId;
+                    const doc = collection.direct.find( selector ).fetch();
+                    $set = _.isNil( modifier.$set ) ? modifier.$set = {} : modifier.$set;
+                    // this is an update
+                    if( doc.length ){
+                        if( updatedAt ){
+                            $set[updatedAt] = new Date();
+                        }
+                        if( updatedBy && !$set[updatedBy] ){
+                            $set[updatedBy] = userId;
+                        }
+                    // this is an insert
+                    } else {
+                        if( createdAt && !$set[createdAt] ){
+                            $set[createdAt] = new Date();
+                        }
+                        if( createdBy && !$set[createdBy] ){
+                            $set[createdBy] = userId;
+                        }
                     }
-                }
-            });
+                });
+            }
         }
-    }
     };
 
     CollectionBehaviours.define( 'timestampable', behaviour );
