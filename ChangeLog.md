@@ -7,6 +7,7 @@
     Release date: 
 
     - Define the conditions which must be met by the collection when appying the behaviour
+    - On upsert, use fetchAsync() instead of (obsolete) fetch()
 
 ### 2.4.0
 

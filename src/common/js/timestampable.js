@@ -134,25 +134,28 @@ const logger = Logger.get();
                     if( userId == null ){
                         userId = systemId;
                     }
-                    const doc = collection.direct.find( selector ).fetch();
-                    $set = _.isNil( modifier.$set ) ? modifier.$set = {} : modifier.$set;
-                    // this is an update
-                    if( doc.length ){
-                        if( updatedAt ){
-                            $set[updatedAt] = new Date();
+                    collection.direct.find( selector ).fetchAsync().then(( doc ) => {
+                        $set = _.isNil( modifier.$set ) ? modifier.$set = {} : modifier.$set;
+                        // this is an update
+                        if( doc.length ){
+                            logger.debug( 'upsert/update', doc, selector );
+                            if( updatedAt ){
+                                $set[updatedAt] = new Date();
+                            }
+                            if( updatedBy && !$set[updatedBy] ){
+                                $set[updatedBy] = userId;
+                            }
+                        // this is an insert
+                        } else {
+                            logger.debug( 'upsert/insert', doc, selector );
+                            if( createdAt && !$set[createdAt] ){
+                                $set[createdAt] = new Date();
+                            }
+                            if( createdBy && !$set[createdBy] ){
+                                $set[createdBy] = userId;
+                            }
                         }
-                        if( updatedBy && !$set[updatedBy] ){
-                            $set[updatedBy] = userId;
-                        }
-                    // this is an insert
-                    } else {
-                        if( createdAt && !$set[createdAt] ){
-                            $set[createdAt] = new Date();
-                        }
-                        if( createdBy && !$set[createdBy] ){
-                            $set[createdBy] = userId;
-                        }
-                    }
+                    });
                 });
             }
         }
