@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 2.4.1-rc.0
+### 2.4.1
 
-    Release date: 
+    Release date: 2026- 5-31
 
     - Define the conditions which must be met by the collection when appying the behaviour
     - On upsert, use fetchAsync() instead of (obsolete) fetch()
@@ -138,4 +138,4 @@
 
 ---
 P. Wieser
-- Last updated on 2026, May. 2nd
+- Last updated on 2026, May. 31st
