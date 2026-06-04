@@ -138,7 +138,7 @@ const logger = Logger.get();
                         $set = _.isNil( modifier.$set ) ? modifier.$set = {} : modifier.$set;
                         // this is an update
                         if( doc.length ){
-                            logger.debug( 'upsert/update', doc, selector );
+                            //logger.debug( 'upsert/update', doc, selector );
                             if( updatedAt ){
                                 $set[updatedAt] = new Date();
                             }
@@ -147,7 +147,7 @@ const logger = Logger.get();
                             }
                         // this is an insert
                         } else {
-                            logger.debug( 'upsert/insert', doc, selector );
+                            //logger.debug( 'upsert/insert', doc, selector );
                             if( createdAt && !$set[createdAt] ){
                                 $set[createdAt] = new Date();
                             }

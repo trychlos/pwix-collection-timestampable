@@ -6,7 +6,7 @@
 
     Release date: 
 
-    - 
+    - Comment-out debug lines on updates
 
 ### 2.4.1
 
