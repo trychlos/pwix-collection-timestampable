@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 2.4.2-rc.0
+### 2.4.2
 
-    Release date: 
+    Release date: 2026- 6-30
 
     - Comment-out debug lines on updates
 
@@ -144,4 +144,4 @@
 
 ---
 P. Wieser
-- Last updated on 2026, May. 31st
+- Last updated on 2026, Jun. 30th
