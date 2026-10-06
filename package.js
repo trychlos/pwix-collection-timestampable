@@ -28,7 +28,7 @@ function configure( api ){
         api.imply( ...arguments );
     };
     api.versionsFrom([ '2.9.0', '3.0-rc.0' ]);
-    _use( 'aldeed:collection2@4.0.1' );
+    _use( 'aldeed:collection2@4.0.1 || 5.0.0' );
     _use( 'aldeed:schema-deny@3.0.0 || 4.0.0 || 5.0.0' );
     _use( 'check' );
     _use( 'ecmascript' );
