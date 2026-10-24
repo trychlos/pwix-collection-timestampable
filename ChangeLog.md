@@ -2,9 +2,9 @@
 
 ## ChangeLog
 
-### 2.4.3-rc.0
+### 2.4.3
 
-    Release date: 
+    Release date: 2026-10-24
 
     - Upgrade aldeed:collection2 to v5.0.0
 
@@ -150,4 +150,4 @@
 
 ---
 P. Wieser
-- Last updated on 2026, Jun. 30th
+- Last updated on 2026, Oct. 24th
